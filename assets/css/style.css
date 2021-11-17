@@ -1,0 +1,228 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  bottom: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  color: rgb(38, 38, 38);
+}
+/* ====================================== */
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+._container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.section {
+  background: url(../images/img.png) center center/cover no-repeat;
+  min-height: 865px;
+  padding: 15px;
+}
+.contact {
+  text-align: center;
+  padding-top: 90px;
+}
+.contact__title {
+  font-size: 90px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.contact__text {
+  font-size: 17px;
+  line-height: 1.5;
+  padding-bottom: 60px;
+}
+.content {
+  display: flex;
+}
+.form {
+  width: 50%;
+}
+.date {
+  padding-left: 100px;
+}
+.date h5 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.date p {
+  margin-bottom: 20px;
+}
+.date__mail,
+.date__tel {
+  position: relative;
+}
+.date__mail::before {
+  content: '';
+  width: 0;
+  transition: all .3s ease-in-out;
+}
+.date__mail:hover::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: -35px;
+  top: -3px;
+  width: 25px;
+  height: 25px;
+  background: url(../../assets/images/envelope-open-text-solid.svg) center center/contain no-repeat;
+}
+.date__tel::before {
+  content: '';
+  width: 0;
+  transition: all .3s ease-in-out;
+}
+.date__tel:hover::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: -35px;
+  top: -3px;
+  width: 25px;
+  height: 25px;
+  background: url(../../assets/images/phone-volume-solid.svg) center center/contain no-repeat;
+}
+.footer {
+  background-color: rgb(38, 38, 38);
+  color: rgb(185, 185, 185);
+}
+.block__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90px;
+}
+.footer__logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+}
+.footer__title {
+  font-size: 15px;
+}
+.footer__title span {
+  font-weight: 700;
+  color: rgb(255, 43, 88);
+}
+form {
+  max-width: 500px;
+  font-weight: 300;
+  font-size: 15px;
+}
+form > div {
+  position: relative;
+  margin-bottom: 20px;
+  color: rgb(38, 38, 38);
+}
+form > div > label {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 22px;
+  left: 20px;
+}
+form > div > input[type="text"],
+form > div > input[type="email"],
+form > div > input[type="tel"],
+form > div > textarea {
+  width: 100%;
+  border: 0;
+  font-size: 15px;
+  padding: 20px 20px 20px 50px;
+  background-color: rgba(0, 196, 196, .5);
+  caret-color: rgb(255, 255, 255);
+}
+
+form > div > input[type="text"]:focus + label,
+form > div > input[type="email"]:focus + label,
+form > div > input[type="tel"]:focus + label,
+form > div > textarea:focus + label {
+  opacity: 0;
+}
+form > div > input[type="text"]:valid + label,
+form > div > input[type="email"]:valid + label,
+form > div > input[type="tel"]:valid + label,
+form > div > textarea:valid + label {
+  opacity: 0;
+}
+form > div > input[type="text"]:valid,
+form > div > input[type="email"]:valid,
+form > div > input[type="tel"]:valid,
+form > div > textarea:valid {
+  background: url(../images/check-circle-regular.svg) 20px 18px/20px no-repeat, rgba(0, 196, 196, .5);
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 196, 196, 1);
+}
+form > div > input[type="text"]:focus,
+form > div > input[type="email"]:focus,
+form > div > input[type="tel"]:focus,
+form > div > textarea:focus {
+  outline: none;
+  border-left: 5px solid rgb(53, 91, 130);
+  background-color: rgba(0, 196, 196, 1);
+}
+form > div > input[type="text"]:invalid,
+form > div > input[type="email"]:invalid,
+form > div > input[type="tel"]:invalid,
+form > div > textarea:invalid {
+  color: rgb(255, 255, 255);
+}
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown),
+form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown),
+form > div > input[type="tel"]:invalid:not(:focus):not(:placeholder-shown),
+form > div > textarea:invalid:not(:focus):not(:placeholder-shown) {
+  background-color: rgb(255, 192, 203);
+}
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown) + label,
+form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown) + label,
+form > div > input[type="tel"]:invalid:not(:focus):not(:placeholder-shown) + label,
+form > div > textarea:invalid:not(:focus):not(:placeholder-shown) + label {
+  opacity: 0;
+}
+form > div > textarea {
+  width: 100%;
+  height: 250px;
+  resize: none;
+  margin-bottom: -5px;
+}
+.error {
+  padding: 0 30px 0 50px;
+  max-height: 0;
+  transition: .28s;
+  overflow: hidden;
+  color: rgb(255, 0, 0);
+  /* color: rgb(153, 153, 153); */
+}
+form > div > input[type="text"]:invalid:focus:not(:placeholder-shown) ~ .error,
+form > div > input[type="email"]:invalid:focus:not(:placeholder-shown) ~ .error,
+form > div > input[type="tel"]:invalid:focus:not(:placeholder-shown) ~ .error,
+form > div > textarea:invalid:focus:not(:placeholder-shown) ~ .error {
+  max-height: 200px;
+  padding: 10px 20px;
+}
